@@ -1,0 +1,45 @@
+body {
+  font-family: 'Georgia', serif;
+}
+
+.header {
+  background-color: black;
+  color: gold;
+  padding: 20px;
+  text-align: center;
+}
+
+.navbar {
+  background-color: gold;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  color: black;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: black;
+  color: gold;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.column {
+  width: 48%;
+}
+
+.column h2 {
+  color: black;
+}
+
+.column p {
+  color: black;
+}
