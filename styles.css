@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to right, #FFDAB9, #FF4500, #87CEFA, #00008B);
+  background: linear-gradient(to right, #FFDAB9, #FF4500, #87CEFA, #00008B, black);
   /* Changed text color to white */
   font-family: 'Papyrus', Fantasy;
   font-weight: bold;
