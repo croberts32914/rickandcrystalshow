@@ -55,8 +55,29 @@ text-align: center;
   /* Add this line for the black border */
 }
 
-/* CSS to add a border around the body */
-body {
-  border: 12px solid black;
-  /* You can adjust the width and color */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    /* Adjust the font size for better readability on smaller screens */
+    /* Adjust other font-related styles as needed */
+  }
+
+  .header {
+    padding: 10px;
+    /* Add padding to the header for better spacing on smaller screens */
+    /* Adjust other header styles like font size, margin, etc. */
+  }
+
+  .menu {
+    display: none;
+    /* Hide the menu on smaller screens */
+    /* You might want to display it differently on smaller screens, like in a dropdown */
+  }
+
+  .content {
+    width: 90%;
+    /* Adjust the width of the content for better fit on smaller screens */
+    /* Modify other content-related styles such as margins, padding, etc. */
+  }
 }
+
