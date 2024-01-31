@@ -1,127 +1,199 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
-<link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <style>
+    body {
+      background-image: url("chess.jpeg");
+      font-family: 'Sans-serif', Helvetica;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0.5in;
+      /* 1/2 inch margin on all sides */
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      /* Remove default margin to ensure no spacing around the body */
+    }
+
+    .header-container {
+      background-color: white;
+      /* Set the background color to teal */
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Serif', Georgia;
+      font-size: 36px;
+      color: red;
+      /* Make the header 100% of the viewport height */
+      margin: 0;
+      /* Remove default margin */
+      padding: 0;
+      text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 3px 3px 0 black;
+    }
+
+    .logo {
+      max-width: 100px;
+      max-height: 100px;
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .logo img {
+      max-width: 100%;
+      max-height: 100%;
+      border: 6px solid red;
+    }
+
+    .navbar {
+      text-align: center;
+      background-color: black;
+      padding: 10px 0;
+      margin-left: -0.5in;
+      /* Adjusted to match the overall margin */
+      margin-right: -0.5in;
+      /* Adjusted to match the overall margin */
+      color: white;
+      /* Explicitly set the text color to white */
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      /* Ensure equal height for all columns */
+      margin: 20px;
+    }
+
+    .content-container {
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      /* Set text color to white */
+      text-align: center;
+    }
+
+    .column {
+      width: 30%;
+      padding: 10px;
+      box-sizing: border-box;
+      /* Include padding in the total width */
+    }
+
+    .column p {
+      margin: 0;
+      /* Remove default margin for paragraphs */
+    }
+
+    .image-column {
+      width: 30%;
+      margin: 0;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      /* Center the image horizontally */
+    }
+
+    .image-column img {
+      width: 100%;
+      /* Set the image width to 100% */
+      height: auto;
+      display: block;
+    }
+
+    .additional-column {
+      width: 30%;
+      padding: 10px;
+      box-sizing: border-box;
+      /* Include padding in the total width */
+    }
+
+    .additional-column p {
+      margin: 0;
+      /* Remove default margin for paragraphs */
+    }
+
+    .footer {
+      font-size: 1.7em;
+      color: black;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer a {
+      color: palevioletred;
+      /* Set the color you prefer for unvisited links (default: blue) */
+      text-decoration: none;
+      /* Remove underlines from links, if desired */
+      font-weight: bold;
+      font-family: Arial;
+    }
+
+    .footer a:visited {
+      color: #800080;
+      /* Set the color you prefer for visited links (default: purple) */
+    }
+
+    .footer a:hover {
+      color: #FF0000;
+      /* Set the color you prefer for links when hovered (default: red) */
+    }
+
+    .footer a:active {
+      color: #00FF00;
+      /* Set the color you prefer for links when active (clicked) (default: green) */
+    }
+
+    .navbar a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white !important;
+    }
+
+    .image-column {
+      border: 6px solid white;
+      /* Set the border width and color */
+      padding: 10px;
+      /* Optional: Add padding to the image */
+    }
+
+    .image-column img {
+      width: 100%;
+      /* Ensure the image takes up the full width of the container */
+      height: auto;
+      /* Maintain the aspect ratio */
+    }
+  </style>
 </head>
 
 <body>
-<style>
+  <div class="navbar" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+    <div style="margin-left: -20px; margin-right: 60px;">
+      <a href=""></a>
+      <a href=""></a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="links.html" class="active">Links</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 
-body {
-  background: linear-gradient(to right, #FFDAB9, #FF4500, #87CEFA, #00008B, black);
-  font-family: 'Papyrus', Fantasy;
-  background-size: cover;
-  /* This ensures the image covers the entire container */
-  background-repeat: no-repeat;
-  /* Prevents image from repeating */
-  background-attachment: fixed;
-  /* Fixed background */
-}
-
-.navbar {
-  text-align: center;
-  background-color: black;
-  padding: 10px 0;
-}
-
-.navbar a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: black;
-}
-
-.navbar a.active {
-  font-weight: bold;
-}
-
-/* Style for the image container */
-.image-container {
-  max-width: 150px; /* Adjust the max width as needed */
-  max-height: 150px; /* Adjust the max height as needed */
-  overflow: hidden; /* Hide any overflowing content */
-  border: 1px solid #ccc; /* Add a border for the box effect */
-  margin: 0 auto; /* Center the image */
-}
-
-/* Style for the image */
-.column {
-  width: 30%; /* Adjust the width of the side content */
-}
-
-.image-column {
-  width: 40%; /* Adjust the width of the image */
-  margin: 0 20px; /* Add margin to create space between image and right content */
-}
-
-.image-column img {
-  width: 100%; /* Make the image fill the image-column */
-  height: auto;
-}
-
-.logo {
-  max-width: 100px; /* Adjust the max width as needed */
-  max-height: 100px; /* Adjust the max height as needed */
-  display: inline-block; /* Ensures it stays in the same line with the heading */
-}
-
-/* header style including background and text color */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-/* Gradient from light orange (#FFDAB9) to dark orange (#FF4500) */
-  font-family: 'Copperplate', Fantasy;
-
-
-body {
-  background: linear-gradient(to right, #FFDAB9, #FF4500);
-}
-  color:  white; /* Set the text color to white for better visibility */
-  padding: 10px;
-}
-
-/* move logo to the right side of the screen */
-.logo {
-  margin-right: 20px; /* Adjust the margin as needed to separate the logo from the text */
-}
-
-/* logo border color and size */
-.logo img {
-  max-width: 100px; /* Adjust the max width of the logo as needed */
-  max-height: 100px; /* Adjust the max height of the logo as needed */
-  border: 2px solid blue; /* Add a gold border around the logo */
-}
-
-.image-column {
-  border: 2px solid black; /* Black border, adjust the width and color as needed */
-  padding: 10px; /* Optional: Add padding inside the border */
-}
-
-.image-column img {
-  width: 100%; /* Make the image fill the div */
-  height: auto; /* Maintain image aspect ratio */
-  display: block; /* Ensure no extra space below the image */
-}
-
-.footer a {
-  font-size: 1.7em; /* Adjust the font size as needed */
-  color: black; /* Set the text color to black */
-}
-
-.navbar {
-  text-align: center;
-  background-color: black;
-  padding: 10px 0;
-}
-
-.navbar a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: blue;
-}
-
-</style>
+  <div style="position: fixed; top: 0; right: 0; margin-right: 60px;">
+    <a href="https://www.youtube.com/channel/UCSEWTLmh92WxfEYYgDqG54g"
+      style="color: rgb(86, 86, 245) !important; text-decoration: underline; font-weight: bold; font-family: Courier New;">Visit
+      Rick
+      and Crystal on Youtube</a>
+  </div>
 
   <div class="header">
     <div class="logo">
@@ -130,33 +202,75 @@ body {
     <h1>Rick & Crystal show</h1>
   </div>
 
-  <div class="navbar">
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </div>
-
-<br>
   <div class="content">
-    <div class="column">
-
+    <div class="column"
+      style="background-color: white; padding: 20px; border-radius: 10px; border-radius: 10px; border: 2px solid black;">
+      <h2>Freedom of Speech</h2>
+      <!-- Blog Text Goes Here -->
+      <p>On the subject of freedom of speech, We see it as a cornerstone of democracy. While we may not necessarily
+        embrace diverse
+        perspectives, we do acknowledge the importance of considering them. Holding firm to our beliefs, we recognize
+        that open and
+        respectful dialogue is crucial for societal progress. This unwavering commitment to our convictions is a key
+        factor in
+        shaping our worldview.</p>
     </div>
 
     <div class="image-column">
-      <img src="rickandcrystal.jpeg" alt="Description of the image"> <!-- Add your large image here -->
+      <img src="rc.jpeg" alt="Your Image">
     </div>
 
-    <div class="column">
-      </div>
+    <!-- Additional column of text -->
+    <div class="additional-column"
+      style="background-color: white; padding: 20px; border-radius: 10px; border-radius: 10px; border: 2px solid black;">
+      <h2>Christianity</h2>
+      <p>Our faith in Christianity is the bedrock of our lives, and our convictions to Jesus Christ run deep. He is our
+        guiding light,
+        providing strength, purpose, and unwavering support in every aspect of our journey. Through prayer, reflection,
+        and a
+        steadfast commitment to living according to Christian principles, I find solace and meaning. This relationship
+        with
+        Jesus shapes not only our spiritual beliefs but also influences the way we navigate life's challenges with
+        compassion,
+        forgiveness, and a profound sense of purpose.</p>
+    </div>
   </div>
 
-  <center>
-    <div class="footer">
-      <a href="https://www.youtube.com/channel/UCSEWTLmh92WxfEYYgDqG54g">Visit Rick and Crystal on Youtube </a>
+  <div class="content">
+    <div class="column"
+      style="background-color: white; padding: 20px; border-radius: 10px; border-radius: 10px; border: 2px solid black;">
+      <h2>Israel</h2>
+      <!-- Blog Text Goes Here -->
+      <p>Turning to our unwavering support for Israel, it's rooted in a recognition of its historical ties and the
+        contemporary
+        challenges it faces. The Bible states Jewish people are God's chosen people, and acknowledging their
+        significance in history
+        deepens my commitment to supporting Israel. Despite the region's complexities, standing behind Israel aligns
+        with our
+        dedication to promoting stability and understanding. This commitment, rooted in faith, shapes not only my
+        worldview but
+        also influences the way we engage with global issues.</p>
     </div>
-  </center>
-  <br><br><br>
+
+    <div class="additional-column"
+      style="background-color: white; padding: 20px; border-radius: 10px; border-radius: 10px; border: 2px solid black;">
+      <h2>Hobbies</h2>
+      <p>Rick and Crystal share a passion for retro gaming, particularly enjoying the classic vibes of Arcade 1up and
+        AtGames arcade
+        games. Our love for movies adds another layer of joy to our leisure time, creating cozy moments together. The
+        family
+        extends to our fur companions – a spirited Doberman Pincher named Jasmine, a dynamic Blue Heeler/Border Collie
+        mix named
+        Buttons, and the sweet rescue cat, Kitty. Our home is adorned with Rick's intricate train sets, reflecting his
+        collector's spirit, while my Crystals penchant lies in amassing a vibrant collection of Barbies. These shared
+        interests weave
+        a tapestry of joy and nostalgia in our lives</p>
+    </div>
+
+    <div class="image-column">
+      <img src="randc.jpeg" alt="Your Image">
+    </div>
 
 </body>
+
 </html>
