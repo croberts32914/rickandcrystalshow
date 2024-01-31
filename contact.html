@@ -3,110 +3,131 @@
 
 <head>
   <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="styles.css">
-  <title>Contact</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  
+<title>Contact</title>
 
 <style>
 
-    body {
-    background-color: #f3e5ab;
-    background-size: cover;
-    /* This ensures the image covers the entire container */
-    background-repeat: no-repeat;
-    /* Prevents image from repeating */
-    background-attachment: fixed;
-    /* Fixed background */
-      font-family: 'Papyrus', Fantasy;
-}
+body {
+  background: radial-gradient(circle, rgba(251,63,63,1) 0%, rgba(252,70,75,1) 30%, rgba(84,16,17,1) 80%);
+  background-size: cover;
+  /* This ensures the image covers the entire container */
+  background-repeat: no-repeat;
+  /* Prevents image from repeating */
+  background-attachment: fixed;
+  /* Fixed background */
+  font-family: 'Sans-serif', Helvetica;
+  }
 
 
 body {
-      margin: 0;
-      padding: 0;
-    }
+  margin: 0;
+  padding: 0;
+}
 
-    .header {
-      text-align: center;
-      padding: 20px;
-    }
+.header {
+  text-align: center;
+  padding: 20px;
+}
 
-    .navbar {
-      text-align: center;
-      background-color: blue;
-      padding: 10px 0;
-    }
+.navbar {
+  text-align: center;
+  background-color: black;
+  padding: 20px 0;
+}
 
-    .navbar a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: black;
-    }
+.navbar a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+}
 
-    .navbar a.active {
-      font-weight: bold;
-    }
+.navbar a.active {
+  font-weight: bold;
+}
 
 form {
-      width: 50%;
-      max-width: 800px;
-      margin: 90px auto 0; /* Center the form and create a 20px margin at the top */
-      padding: 30px;
-      background-color: #f9f9f9;
-      border-radius: 10px;
-      border: 4px solid #000; /* Add border properties */
+  width: 50%;
+  max-width: 800px;
+  margin: 90px auto 0; /* Center the form and create a 20px margin at the top */
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 4px solid #000; /* Add border properties */
 
-    }
+}
 
 form textarea {
-      width: 89%;
-      padding: 40px;
-      margin-bottom: 10px;
-      font-size: 1.2em;
-    }
+  width: 89%;
+  padding: 40px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
 
 form button {
-      padding: 4px 4px;
-      font-size: 1.2em;
-    }
+  padding: 4px 4px;
+  font-size: 1.2em;
+}
 
 /* Add this CSS to your existing styles or styles.css file */
 .send-button {
-  background-color: grey;
-  color: white;
-  border: 2px solid black;
-  padding: 5px 10px;
+background-color: blue;
+color: white;
+border: 2px solid black;
+padding: 5px 10px;
 }
 
 .send-button:hover {
-  background-color: #909090; /* Change to a different color on hover */
+background-color: #909090; /* Change to a different color on hover */
 }
 
 .navbar {
   text-align: center;
   background-color: black;
   padding: 10px 0;
+  margin-left: -0.5in;
+  /* Adjusted to match the overall margin */
+  margin-right: -0.5in;
+  /* Adjusted to match the overall margin */
+  color: white; /* Explicitly set the text color to white */
 }
 
-.navbar a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: blue;
+  .navbar a {
+margin: 0 15px;
+text-decoration: none;
+color: white !important;
 }
+
+.contact-heading {
+text-align: center;
+}
+
+.contact-heading {
+  color: black; /* Set the text color */
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+
 
 </style>
 </head>
 
 <body>
-  <div class="header">
-    <h1>Contact</h1>
-  </div>
-
-  <div class="navbar">
+<div class="navbar" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+  <div style="margin-left: -20px; margin-right: 60px;">
+    <a href=""></a>
+    <a href=""></a>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
+    <a href="links.html">Links</a>
     <a href="contact.html" class="active">Contact</a>
   </div>
+</div>
+
+<br><br><br><br>
+<h1 class="contact-heading">We look forward to hearing from you!</h1>
+
+<h2 class="contact-heading">We will get back to you soon...</h2>
 
 <form action="https://formsubmit.co/c.roberts32914@gmail.com" method="POST">
   <input type="text" name="Name" placeholder="Full Name" required><br><br>

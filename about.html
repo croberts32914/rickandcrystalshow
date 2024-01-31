@@ -6,74 +6,65 @@
     <title>About</title>
 
     <style>
-      body {
-        color: black;
-        margin: 0;
-        /* Remove margin to eliminate space at the top */
-        font-family: Arial, sans-serif;
-        padding: 0;
-        /* Reset padding to 0 */
-          font-family: 'Papyrus', Fantasy;
-      }
+body {
+      background: radial-gradient(circle, rgba(251,63,63,1) 0%, rgba(252,70,75,1) 30%, rgba(84,16,17,1) 80%);
+      /* Change the hex color values as needed */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      font-family: 'Sans-serif', Helvetica;
+      color: white; /* Change text color to black */
+    }
 
-      .navbar {
-        text-align: center;
-        background-color: black;
-        padding: 10px 0;
-      }
+    .navbar {
+      text-align: left;
+      background-color: black;
+      padding: 20px 0;
+      color: white; /* Set text color to white */
+    }
 
-      .navbar a {
-        margin: 0 15px;
-        text-decoration: none;
-        color: blue;
-      }
+    .navbar a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white !important;
+    }
 
-      .navbar a.active {
-        font-weight: bold;
-      }
+    .content-container {
+      background-color: transparent; /* Change to transparent */
+      padding: 20px;
+       border-radius: 10px;
+      color: white; /* Set text color to black */
+      text-align: center;
+    }
 
-      .header {
-        text-align: center;
-        padding: 20px 0;
-      }
+    p {
+      font-size: 16pt;
+      line-height: 2;
+      margin-bottom: 50px;
+    }
 
-      .content-container {
-        padding: 60px;
-      }
-
-      p {
-        font-size: 16pt;
-        line-height: 2;
-        margin-bottom: 50px;
-      }
-
-      body {
-  background-color: #f3e5ab;
-  background-size: cover;
-  /* This ensures the image covers the entire container */
-  background-repeat: no-repeat;
-  /* Prevents image from repeating */
-  background-attachment: fixed;
-  /* Fixed background */
+    /* Add this style to make the text bold */
+.content-container p {
+  font-weight: bold;
 }
-
-    </style>
-
-  </head>
+</style>
+</head>
 
   <body>
-    <header class="header">
-      <h1>About</h1>
-    </header>
-
-    <div class="navbar">
+    <div class="navbar" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+      <div style="margin-left: -20px; margin-right: 60px;">
+        <a href=""></a>
+                <a href=""></a>
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
-      <a href="gallery.html">Gallery</a>
+      <a href="links.html">Links</a>
       <a href="contact.html">Contact</a>
     </div>
+</div>
 
-    <div class="content-container">
+<div class="content-container" style="padding: 20px; border-radius: 10px;">
       <p>
         Welcome to our corner of the internet! We're Rick and Crystal, and we're genuinely excited to have you here.
         Have
@@ -109,12 +100,13 @@
       </p>
 
       <p>
-        Feel free to leave a comment or a reply—we're always eager to engage in meaningful conversations. Looking
+        Feel free to leave a message we're always eager to engage in meaningful conversations. Looking
         forward
         to
         connecting with you!
       </p>
     </div>
+  </div>
 
   </body>
 
